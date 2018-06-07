@@ -11,6 +11,12 @@ package peopledb;
  */
 public class PeopleDBApp {
     public static void main(String[] args) {
+        PeopleDB.openDB();
         PeopleGUI pg = new PeopleGUI();
+        
+        
+        
+        
+        PeopleDB.closeAndCommitDB();
     }
 }

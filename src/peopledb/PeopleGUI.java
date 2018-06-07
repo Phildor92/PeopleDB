@@ -36,14 +36,22 @@ public class PeopleGUI extends JFrame {
         setLayout(new GridLayout(0,1));
         JPanel textFieldPanel = new JPanel();
         textFieldPanel.setLayout(new GridBagLayout());
+        GridBagConstraints c = new GridBagConstraints();
         for(int i = 0; i<personTextFields.length;i++){
-            GridBagConstraints c = new GridBagConstraints();
+            
             personLabels[i] = new JLabel(labelDefaultText[i]);
             personTextFields[i] = new JTextField("");
+            c.gridx = 0;
+            c.gridy = i;
             textFieldPanel.add(personLabels[i], c);
+            c.gridx = 1;
             textFieldPanel.add(personTextFields[i], c);
         }
-        textFieldPanel.add(new JButton("test"),new GridBagConstraints(3,6,3,12,0,0,GridBagConstraints.CENTER,0,new Insets(0, 0, 0, 0),0,0));
+        c.gridx = 2;
+        c.gridy = 6;
+        textFieldPanel.add(new JButton("test"),c);
+        c.gridy = 7;
+        textFieldPanel.add(new JButton("test2"),c);
         add(textFieldPanel);
 
         
