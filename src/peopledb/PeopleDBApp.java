@@ -10,12 +10,13 @@ package peopledb;
  * @author phildor
  */
 public class PeopleDBApp {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        PeopleDB.openDB();
+        PeopleGUI pg = new PeopleGUI();
+        
+        
+        
+        
+        PeopleDB.closeAndCommitDB();
     }
-    
 }
