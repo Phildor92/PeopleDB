@@ -13,25 +13,22 @@ import java.util.Date;
  * @author phildor
  */
 public class Person {
-    private String firstName, lastName, nickname, gender, comment, locMet;
-    private int fatherID, motherID, telephoneNr, personID;
+    private String firstName, lastName, nickname, gender, comment, locMet, telephoneNr;
+    private int fatherID, motherID, personID;
     private Date birthDate, deathDate, entryDate;
     private ArrayList<Address> addressList;
     private ArrayList<HistData> histdataList;
     private ArrayList<Reporting> reportList;
 
-    public Person(String firstName, String lastName, String nickname, String gender, String comment, String locMet, int fatherID, int motherID, int telephoneNr, Date birthDate, Date deathDate, Date entryDate) {
+    public Person(String firstName, String lastName, String nickname, String gender, String comment, String locMet, String telephoneNr, Date birthDate, Date entryDate) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.nickname = nickname;
         this.gender = gender;
         this.comment = comment;
         this.locMet = locMet;
-        this.fatherID = fatherID;
-        this.motherID = motherID;
         this.telephoneNr = telephoneNr;
         this.birthDate = birthDate;
-        this.deathDate = deathDate;
         this.entryDate = entryDate;
         this.addressList = this.getListOfAddresses();
         this.histdataList = this.getListofHistData();
@@ -124,11 +121,11 @@ public class Person {
         this.motherID = motherID;
     }
 
-    public int getTelephoneNr() {
+    public String getTelephoneNr() {
         return telephoneNr;
     }
 
-    public void setTelephoneNr(int telephoneNr) {
+    public void setTelephoneNr(String telephoneNr) {
         this.telephoneNr = telephoneNr;
     }
 
